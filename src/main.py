@@ -1,5 +1,4 @@
 import requests
-from rich.pretty import pprint as rprint
 import hashlib
 import logging
 import re
@@ -150,11 +149,8 @@ if __name__ == "__main__":
 
     # run all the methods
     user.send_verification_email()
-    # user.update_user(username="qwe", visibility="public", age=30)
+    user.update_user(username="qwe", visibility="public", age=30)
     # user.enable_2fa()
     # user.delete_user()
-
-    # logging user detail
-    rprint(user.__dict__, expand_all=True)
 
     load_hf_model()
